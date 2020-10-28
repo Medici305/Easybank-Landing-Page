@@ -1,0 +1,13 @@
+@mixin border($size, $color) {
+    border: $size solid $color;
+}
+
+@mixin dimension($height, $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin image-dimension($height, $max-width) {
+    height: $height;
+    max-width: $max-width;
+}
