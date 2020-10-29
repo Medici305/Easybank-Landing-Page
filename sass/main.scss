@@ -31,7 +31,7 @@ html {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            .logo, .navigation, .navigation ul, .button {
+            .logo, .navigation, .navigation ul, .button, .menu {
                 flex: 1;
                 display: flex;
                 align-items: center;
@@ -50,12 +50,20 @@ html {
                 
                 ul {
                     list-style: none;
+                    height: 100%;
                     //@include border(3px, blue);
                     li {
                         margin: 0px 20px;
                         //@include border(3px, blue);
                         padding: 12px 7px;
-
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        a {
+                            //@include border(3px, blue);
+                            //height: 100%;
+                            
+                        }
                     }
 
                 }
@@ -76,6 +84,9 @@ html {
                     }
 
                 }
+            }
+            .menu {
+                justify-content: flex-end;
             }
         }
     }
@@ -104,4 +115,23 @@ html {
 
 #remove-shadow {
     box-shadow: none;
+}
+
+.sidenav {
+    text-align: center;
+    .customer-service, li a {
+        margin: 15px 0px;
+    }
+    .customer-service {
+        //@include border(3px, green);
+        height: 9rem;
+        overflow: hidden;
+        img {
+            height: 90%;
+            max-width: 100%;
+        }
+    }
+    li a {
+        font-size: 1.1rem;
+    }
 }
