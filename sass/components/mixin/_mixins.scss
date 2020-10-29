@@ -11,3 +11,10 @@
     height: $height;
     max-width: $max-width;
 }
+
+@mixin backgroundImage($file, $position, $size) {
+    background-image: url($file);
+    background-repeat: no-repeat;
+    background-position: $position;
+    background-size: $size;
+}
