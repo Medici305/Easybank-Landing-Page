@@ -23,7 +23,7 @@ p, span {
 
 .overview {
     display: grid;
-    grid: 70px 650px 650px 400px 150px / 1fr;
+    grid: 70px 650px 650px 650px 150px / 1fr;
     grid-auto-rows: auto;
     .header {
         grid-area: 1 / 1 / 2 / 2;
@@ -186,7 +186,50 @@ p, span {
     /* 4. ARTICLE SECTION */
     .articles {
         grid-area: 4 / 1 / 5 / 2;
-        background: rgb(255, 184, 52);
+        background-color: hsl(0, 0%, 98%);
+        @include flex(flex, row, center, center);
+        .inner-article {
+            //@include border(4px, black);
+            flex: 0.85;
+            height: 80%;
+            @include flex(flex, column);
+            .article-title, .article-box{
+                //@include border(4px, black);
+                @include flex();
+            }
+            .article-title {
+                flex: 0.2;
+            }
+            .article-box {
+                flex: 0.8;
+                .article-item, .article-item-two, .article-item-three, .article-item-four {
+                    //@include border(4px, black);
+                    margin-right: 1rem;
+                    flex: 1;
+                    @include flex(flex, column);
+                    .article-image {
+                        //@include border(4px, black);
+                        flex: 1;
+
+                    }
+                    .article-description {
+                        background-color: #fff;
+                        text-align: center;
+                        //@include border(4px, black);
+                        flex: 1;
+                        h6 {
+                            font-size: 0.9rem;
+                        }
+                        h5 {
+                            &:hover {
+                                color: hsl(192, 70%, 51%);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     /* 5. FOOTER SECTION */
     .footer {

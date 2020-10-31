@@ -30,7 +30,7 @@ p, span {
 
 .overview {
   display: grid;
-  grid: 70px 650px 650px 400px 150px/1fr;
+  grid: 70px 650px 650px 650px 150px/1fr;
   grid-auto-rows: auto;
   /* 2. BANNER SECTION */
   /* 3. CONTENT SECTION */
@@ -170,7 +170,54 @@ p, span {
 }
 .overview .articles {
   grid-area: 4/1/5/2;
-  background: #ffb834;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.overview .articles .inner-article {
+  flex: 0.85;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+.overview .articles .inner-article .article-title, .overview .articles .inner-article .article-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: none;
+}
+.overview .articles .inner-article .article-title {
+  flex: 0.2;
+}
+.overview .articles .inner-article .article-box {
+  flex: 0.8;
+}
+.overview .articles .inner-article .article-box .article-item, .overview .articles .inner-article .article-box .article-item-two, .overview .articles .inner-article .article-box .article-item-three, .overview .articles .inner-article .article-box .article-item-four {
+  margin-right: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+.overview .articles .inner-article .article-box .article-item .article-image, .overview .articles .inner-article .article-box .article-item-two .article-image, .overview .articles .inner-article .article-box .article-item-three .article-image, .overview .articles .inner-article .article-box .article-item-four .article-image {
+  flex: 1;
+}
+.overview .articles .inner-article .article-box .article-item .article-description, .overview .articles .inner-article .article-box .article-item-two .article-description, .overview .articles .inner-article .article-box .article-item-three .article-description, .overview .articles .inner-article .article-box .article-item-four .article-description {
+  background-color: #fff;
+  text-align: center;
+  flex: 1;
+}
+.overview .articles .inner-article .article-box .article-item .article-description h6, .overview .articles .inner-article .article-box .article-item-two .article-description h6, .overview .articles .inner-article .article-box .article-item-three .article-description h6, .overview .articles .inner-article .article-box .article-item-four .article-description h6 {
+  font-size: 0.9rem;
+}
+.overview .articles .inner-article .article-box .article-item .article-description h5:hover, .overview .articles .inner-article .article-box .article-item-two .article-description h5:hover, .overview .articles .inner-article .article-box .article-item-three .article-description h5:hover, .overview .articles .inner-article .article-box .article-item-four .article-description h5:hover {
+  color: #2bb7da;
+  cursor: pointer;
 }
 .overview .footer {
   grid-area: 5/1/6/2;

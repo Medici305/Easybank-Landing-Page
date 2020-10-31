@@ -18,3 +18,10 @@
     background-position: $position;
     background-size: $size;
 }
+
+@mixin flex($display: flex, $direction: row, $justify: none, $align: none) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
